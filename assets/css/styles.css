@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+h2 {
+    color: #333;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul a {
+    text-decoration: none;
+    color: #0069d9;
+    transition: color 0.3s ease;
+}
+
+ul a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Affiliate section */
+.skrime-affiliate {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.skrime-affiliate img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.skrime-affiliate a {
+    color: #2443ac;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.skrime-affiliate a:hover {
+    color: #2443ac;
+    text-decoration: underline;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+    .skrime-affiliate {
+        flex-direction: column;
+        text-align: center;
+    }
+    .skrime-affiliate img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #383838;
+    color: #fefefe;
+    padding-top: 3.5rem;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+footer a {
+    color: #90caf9;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.5s ease;
+}
+
+footer a:hover {
+    color: #76ff03;
+}
