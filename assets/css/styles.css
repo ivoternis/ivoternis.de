@@ -21,19 +21,20 @@ a:hover {
 main {
     --base-margin: clamp(20px, 10%, 120px);
     padding: 25px;
+    padding-top: 0;
     flex-grow: 1;
     background-color: #f8f8f8;
     margin: var(--base-margin);
     margin-inline: calc(var(--base-margin) * 0.9);
     margin-top: calc(var(--base-margin) * 0.5);
     margin-bottom: calc(var(--base-margin) - 0.35 * var(--base-margin));
-    border-radius: 12px 16px 12px 24px;
+    border-radius: 32px 16px 48px 16px;
     border: 1px solid lightgray;
 }
 
 h2 {
     color: #333;
-    margin-top: 25px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
@@ -48,13 +49,22 @@ ul li {
 
 ul a {
     text-decoration: none;
-    color: #0069d9;
+    color: whitesmoke;
     transition: color 0.3s ease;
+    background-color: #0069d98d;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 
+        color 0.3s ease,
+        background-color 0.3s ease,
+        padding 0.3s ease;
+    transition-duration: 0.3s;
 }
 
 ul a:hover {
-    color: #0056b3;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
+    padding: 5px 12px;
+    background-color: #0057b394;
 }
 
 .skrime-affiliate {
