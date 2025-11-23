@@ -10,6 +10,10 @@ html, body {
     cursor: url('/assets/vector/arrowhead-rounded-outline.svg') 12 12, auto;
 }
 
+a:hover {
+    cursor: url('/assets/vector/hand-pointer.svg') 12 12, pointer;
+}
+
 main {
     padding: 25px;
     flex-grow: 1;
