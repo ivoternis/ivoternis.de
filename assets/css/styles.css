@@ -129,8 +129,8 @@ ul a:hover {
 footer {
     background-color: var(--footer-background);
     color: var(--footer-color);
-    padding-top: 3.5rem;
-    padding-bottom: 1rem;
+    padding-top: 2.5rem;
+    padding-bottom: .5rem;
     text-align: center;
     border-top-left-radius: var(--border-radius-layout);
     border-top-right-radius: var(--border-radius-layout);
