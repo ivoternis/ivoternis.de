@@ -1,17 +1,32 @@
 :root {
     --border-radius-layout: 32px;
+
+    --body-background: light-dark(cornsilk, #222);
+    --body-color: light-dark(#222, #f8f8f8);
+    --main-background: light-dark(#f8f8f8, #333);
+    --main-border-color: light-dark(lightgray, #555);
+    --heading-color: light-dark(#333, #eee);
+    --link-background: light-dark(#0069d98d, #0057b394);
+    --link-color: light-dark(whitesmoke, #e0e0e0);
+    --link-hover-background: light-dark(#0057b394, #0069d98d);
+    --skrime-link-color: light-dark(#2443ac, #8cb4ff); /* Skrime-Branding change */
+    --footer-background: light-dark(#383838, #1a1a1a);
+    --footer-color: light-dark(#fefefe, #e0e0e0);
+    --footer-link-color: light-dark(#90caf9, #a3d9ff);
+    --footer-link-hover-color: light-dark(lightblue, #cceeff);
 }
 
 html, body {
     font-family: Arial, sans-serif;
-    background-color: cornsilk;
-    color: #222;
+    background-color: var(--body-background);
+    color: var(--body-color);
     line-height: 1.6;
     margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     cursor: url('/assets/vector/arrowhead-rounded-outline.svg') 12 12, auto;
+    color-scheme: light dark;
 }
 
 a:hover {
@@ -23,19 +38,21 @@ main {
     padding: 25px;
     padding-top: 0;
     flex-grow: 1;
-    background-color: #f8f8f8;
+    background-color: var(--main-background);
     margin: var(--base-margin);
     margin-inline: calc(var(--base-margin) * 0.9);
     margin-top: calc(var(--base-margin) * 0.5);
     margin-bottom: calc(var(--base-margin) - 0.35 * var(--base-margin));
     border-radius: 32px 16px 48px 16px;
-    border: 1px solid lightgray;
+    border: 1px solid var(--main-border-color);
+    color-scheme: light dark;
 }
 
 h2 {
-    color: #333;
+    color: var(--heading-color);
     margin-top: 0px;
     margin-bottom: 10px;
+    color-scheme: light dark;
 }
 
 ul {
@@ -49,9 +66,9 @@ ul li {
 
 ul a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--link-color);
     transition: color 0.3s ease;
-    background-color: #0069d98d;
+    background-color: var(--link-background);
     padding: 5px 10px;
     border-radius: 8px;
     transition: 
@@ -59,12 +76,12 @@ ul a {
         background-color 0.3s ease,
         padding 0.3s ease;
     transition-duration: 0.3s;
+    color-scheme: light dark;
 }
 
 ul a:hover {
-    /*text-decoration: underline;*/
     padding: 5px 12px;
-    background-color: #0057b394;
+    background-color: var(--link-hover-background);
 }
 
 .skrime-affiliate {
@@ -73,6 +90,7 @@ ul a:hover {
     margin-top: 20px;
     display: flex;
     align-items: center;
+    color-scheme: light dark;
 }
 
 .skrime-affiliate img {
@@ -82,14 +100,15 @@ ul a:hover {
 }
 
 .skrime-affiliate a {
-    color: #2443ac;
+    color: var(--skrime-link-color);
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
+    color-scheme: light dark;
 }
 
 .skrime-affiliate a:hover {
-    color: #2443ac;
+    color: var(--skrime-link-color);
     text-decoration: underline;
 }
 
@@ -108,22 +127,24 @@ ul a:hover {
 }
 
 footer {
-    background-color: #383838;
-    color: #fefefe;
+    background-color: var(--footer-background);
+    color: var(--footer-color);
     padding-top: 3.5rem;
     padding-bottom: 1rem;
     text-align: center;
     border-top-left-radius: var(--border-radius-layout);
     border-top-right-radius: var(--border-radius-layout);
+    color-scheme: light dark;
 }
 
 footer a {
-    color: #90caf9;
+    color: var(--footer-link-color);
     text-decoration: none;
     margin: 0 15px;
     transition: color 0.5s ease;
+    color-scheme: light dark;
 }
 
 footer a:hover {
-    color: lightblue;
+    color: var(--footer-link-hover-color);
 }
