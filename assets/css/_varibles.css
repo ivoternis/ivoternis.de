@@ -1,0 +1,27 @@
+:root {
+    --border-radius-layout: 32px;
+
+    --body-background: light-dark(cornsilk, #222);
+    --body-color: light-dark(#222, #f8f8f8);
+    --main-background: light-dark(#f8f8f8, #333);
+    --main-border-color: light-dark(lightgray, #555);
+    --heading-color: light-dark(#333, #eee);
+    --link-background: light-dark(#0069d98d, #0057b394);
+    --link-color: light-dark(whitesmoke, #e0e0e0);
+    --link-hover-background: light-dark(#0057b394, #0069d98d);
+    --skrime-link-color: light-dark(#2443ac, #8cb4ff);
+    --footer-background: light-dark(#383838, #1a1a1a);
+    --footer-color: light-dark(#fefefe, #e0e0e0);
+    --footer-link-color: light-dark(#90caf9, #a3d9ff);
+    --footer-link-hover-color: light-dark(lightblue, #cceeff);
+
+    --project-card-background: light-dark(#ffffff, #444);
+    --project-card-border: light-dark(#ddd, #666);
+    --project-card-title-color: light-dark(#333, #eee);
+    --project-card-description-color: light-dark(#666, #ccc);
+    --project-card-link-background: light-dark(#007bff, #5cb85c);
+    --project-card-link-color: light-dark(white, white);
+    --project-card-link-hover-background: light-dark(#0056b3, #4cae4c);
+    --project-card-category-background: light-dark(#e9ecef, #555);
+    --project-card-category-color: light-dark(#495057, #ddd);
+}

@@ -1,0 +1,107 @@
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: var(--body-background);
+    color: var(--body-color);
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    cursor: url('/assets/vector/arrowhead-rounded-outline.svg') 12 12, auto;
+    color-scheme: light dark;
+}
+
+a:hover {
+    cursor: url('/assets/vector/hand-pointer.svg') 12 12, pointer;
+}
+
+main {
+    --base-margin: clamp(20px, 10%, 120px);
+    padding: 25px;
+    padding-top: 0;
+    flex-grow: 1;
+    background-color: var(--main-background);
+    margin: var(--base-margin);
+    margin-inline: calc(var(--base-margin) * 0.9);
+    margin-top: calc(var(--base-margin) * 0.5);
+    margin-bottom: calc(var(--base-margin) - 0.35 * var(--base-margin));
+    border-radius: 32px 16px 48px 16px;
+    border: 1px solid var(--main-border-color);
+    color-scheme: light dark;
+}
+
+h2 {
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 10px;
+    color-scheme: light dark;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--link-color);
+    background-color: var(--link-background);
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        padding 0.3s ease;
+    color-scheme: light dark;
+}
+
+ul a:hover {
+    padding: 5px 12px;
+    background-color: var(--link-hover-background);
+}
+
+.skrime-affiliate {
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    color-scheme: light dark;
+}
+
+.skrime-affiliate img {
+    max-width: 100px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.skrime-affiliate a {
+    color: var(--skrime-link-color);
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color-scheme: light dark;
+}
+
+.skrime-affiliate a:hover {
+    color: var(--skrime-link-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+    .skrime-affiliate {
+        flex-direction: column;
+        text-align: center;
+    }
+    .skrime-affiliate img {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+}
