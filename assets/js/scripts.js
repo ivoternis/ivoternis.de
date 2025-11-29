@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const username = 'ivoternis';
 
     if (!modrinthProjectsContainer) {
-        console.error('Modrinth projects container not found.');
+        console.error('Kein Modrinth Projektcontainder gefunden.');
         return;
     }
 
