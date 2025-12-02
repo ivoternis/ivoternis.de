@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('modrinth-projects');
     const githubActivityContainer =
         document.getElementById('github-activity-streak');
+    const chessComLastOnlineContainer = document.getElementById(
+        'chess-com-last-online',
+    );
+
     const username = 'ivoternis';
+    const chessComUsername = 'ivoternis';
 
     async function fetchGithubActivity() {
         try {
@@ -60,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             streak = 1;
         }
 
-        let loopLimit = 30;
+        let loopLimit = 365;
         for (let i = 0; i < loopLimit; i++) {
             const dayToCheck = new Date(currentDay);
             dayToCheck.setDate(currentDay.getDate() - i);
@@ -84,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 continue;
             }
-
 
             if (activityDates.has(dayString)) {
                 if (yesterdayHadActivity) {
@@ -116,8 +120,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    //fetchGithubActivity();
+    async function fetchChessComLastOnline() {
+        if (!chessComLastOnlineContainer) {
+            console.error('Kein Chess.com Container gefunden.');
+            return;
+        }
+
+        try {
+            const response = await fetch(
+                `https://api.chess.com/pub/player/${chessComUsername}`,
+            );
+
+            if (!response.ok) {
+                throw new Error(
+                    `Chess.com API HTTP error! status: ${response.status}`,
+                );
+            }
+
+            const playerData = await response.json();
+            console.log('Chess.com Player Data:', playerData);
+
+            if (playerData && playerData.last_online) {
+                const lastOnlineTimestamp = playerData.last_online * 1000;
+                const lastOnlineDate = new Date(lastOnlineTimestamp);
+
+                const options = {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                };
+                const formattedDate = lastOnlineDate.toLocaleDateString(
+                    'de-DE',
+                    options,
+                );
+
+                chessComLastOnlineContainer.innerHTML = `
+                    <p>Zuletzt Online auf Chess.com: <strong>${formattedDate}</strong></p>
+                `;
+            } else {
+                chessComLastOnlineContainer.innerHTML =
+                    '<p>Keine "zuletzt Online"-Daten von Chess.com verfügbar.</p>';
+            }
+        } catch (error) {
+            console.error(
+                'Failed to fetch Chess.com last online status:',
+                error,
+            );
+            chessComLastOnlineContainer.innerHTML =
+                '<p>Fehler beim Laden der Chess.com Aktivität.</p>';
+        }
+    }
+
     countGithubActivityStreak();
+    fetchChessComLastOnline();
 
     if (!modrinthProjectsContainer) {
         console.error('Kein Modrinth Projektcontainder gefunden.');

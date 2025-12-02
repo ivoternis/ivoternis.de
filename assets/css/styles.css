@@ -29,6 +29,12 @@
     --github-streak-color: light-dark(#0056b3, #8cb4ff);
     --github-streak-border: light-dark(#a0d9ff, #5a7b9c);
     --github-streak-font-weight: bold;
+
+    /* New: Chess.com Last Online Variables */
+    --chess-last-online-background: light-dark(#ffe0b2, #4a3a2a);
+    --chess-last-online-color: light-dark(#e65100, #ffb380);
+    --chess-last-online-border: light-dark(#ffcc80, #7a5d3a);
+    --chess-last-online-font-weight: bold;
 }
 
 html, body {
@@ -297,4 +303,30 @@ footer a:hover {
 #github-activity-streak p strong {
     font-size: 1.3em;
     color: var(--github-streak-color);
+}
+
+#chess-com-last-online {
+    background-color: var(--chess-last-online-background);
+    border: 1px solid var(--chess-last-online-border);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color-scheme: light dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chess-com-last-online p {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--chess-last-online-color);
+    font-weight: var(--chess-last-online-font-weight);
+}
+
+#chess-com-last-online p strong {
+    font-size: 1.3em;
+    color: var(--chess-last-online-color);
 }
