@@ -29,6 +29,16 @@
     --github-streak-color: light-dark(#0056b3, #8cb4ff);
     --github-streak-border: light-dark(#a0d9ff, #5a7b9c);
     --github-streak-font-weight: bold;
+
+    --chess-last-online-background: light-dark(#ffe0b2, #4a3a2a);
+    --chess-last-online-color: light-dark(#e65100, #ffb380);
+    --chess-last-online-border: light-dark(#ffcc80, #7a5d3a);
+    --chess-last-online-font-weight: bold;
+
+    --chess-dynamic-last-seen-background: light-dark(#e3f2fd, #2a3a4a);
+    --chess-dynamic-last-seen-color: light-dark(#1976d2, #a3d9ff);
+    --chess-dynamic-last-seen-border: light-dark(#90caf9, #4a6a8a);
+    --chess-dynamic-last-seen-font-weight: bold;
 }
 
 html, body {
@@ -137,6 +147,10 @@ ul a:hover {
         margin-bottom: 10px;
         margin-right: 0;
     }
+}
+
+.aitchsystems-affiliate a img {
+    max-width: 50vw;
 }
 
 .project-grid {
@@ -298,3 +312,57 @@ footer a:hover {
     font-size: 1.3em;
     color: var(--github-streak-color);
 }
+
+#chess-com-last-online {
+    background-color: var(--chess-last-online-background);
+    border: 1px solid var(--chess-last-online-border);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color-scheme: light dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chess-com-last-online p {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--chess-last-online-color);
+    font-weight: var(--chess-last-online-font-weight);
+}
+
+#chess-com-last-online p strong {
+    font-size: 1.3em;
+    color: var(--chess-last-online-color);
+}
+
+#chess-com-dynamic-last-seen {
+    background-color: var(--chess-dynamic-last-seen-background);
+    border: 1px solid var(--chess-dynamic-last-seen-border);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color-scheme: light dark;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chess-com-dynamic-last-seen p {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--chess-dynamic-last-seen-color);
+    font-weight: var(--chess-dynamic-last-seen-font-weight);
+}
+
+#chess-com-dynamic-last-seen p strong {
+    font-size: 1.3em;
+    color: var(--chess-dynamic-last-seen-color);
+}
+
+.hidden { visibility: hidden !important; display: none !important; max-height: 0 !important; height: auto !important;}
