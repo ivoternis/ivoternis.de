@@ -150,7 +150,11 @@ ul a:hover {
 }
 
 .aitchsystems-affiliate a img {
-    max-width: 50vw;
+    max-width: 75vw;
+}
+
+.affiliate-section a:hover {
+    scale: 1.1;
 }
 
 .project-grid {
