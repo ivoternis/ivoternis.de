@@ -85,6 +85,10 @@ ul {
     padding: 0;
 }
 
+ul.links-list:hover {
+    cursor: url('/assets/vector/hand-pointer.svg') 12 12, pointer;
+}
+
 ul li {
     margin-bottom: 10px;
 }
@@ -102,6 +106,7 @@ ul a {
         border-radius .3s ease-in-out,
         margin .3s ease-in-out;
     color-scheme: light dark;
+    margin: 8px;
     /*margin-inline-start: 0;*/
 }
 
@@ -109,7 +114,7 @@ ul a:hover {
     /*padding: 6px 12px;*/
     padding: 9px 18px;
     border-radius: 24px;
-    margin: -8px;
+    margin: 0px;
     background-color: var(--link-hover-background);
 }
 
