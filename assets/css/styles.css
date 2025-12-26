@@ -44,6 +44,7 @@
 html, body {
     font-family: Arial, sans-serif;
     background-color: var(--body-background);
+    background-image: linear-gradient(to bottom, var(--body-background), var(--footer-background));
     color: var(--body-color);
     line-height: 1.6;
     margin: 0;
@@ -85,9 +86,11 @@ ul {
     padding: 0;
 }
 
+/*
 ul.links-list:hover {
     cursor: url('/assets/vector/hand-pointer.svg') 12 12, pointer;
 }
+*/
 
 ul li {
     margin-bottom: 10px;
@@ -106,8 +109,12 @@ ul a {
         border-radius .3s ease-in-out,
         margin .3s ease-in-out;
     color-scheme: light dark;
-    margin: 8px;
     /*margin-inline-start: 0;*/
+    margin: 8px;
+}
+
+ul span {
+    margin: 8px;
 }
 
 ul a:hover {
