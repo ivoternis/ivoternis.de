@@ -41,6 +41,50 @@
     --chess-dynamic-last-seen-font-weight: bold;
 }
 
+:root {
+  --border-radius-layout: 32px;
+
+  --body-background: #222;
+  --body-color: #f8f8f8;
+  --main-background: #333;
+  --main-border-color: #555;
+  --heading-color: #eee;
+  --link-background: #0057b394;
+  --link-color: #e0e0e0;
+  --link-hover-background: #0069d98d;
+  --skrime-link-color: #8cb4ff;
+  --footer-background: #1a1a1a;
+  --footer-color: #e0e0e0;
+  --footer-link-color: #a3d9ff;
+  --footer-link-hover-color: #cceeff;
+
+  --project-card-background: #444;
+  --project-card-border: #666;
+  --project-card-title-color: #eee;
+  --project-card-description-color: #ccc;
+  --project-card-link-background: #5cb85c;
+  --project-card-link-color: white;
+  --project-card-link-hover-background: #4cae4c;
+  --project-card-category-background: #555;
+  --project-card-category-color: #ddd;
+
+  --github-streak-background: #3a4a5a;
+  --github-streak-color: #8cb4ff;
+  --github-streak-border: #5a7b9c;
+  --github-streak-font-weight: bold;
+
+  --chess-last-online-background: #4a3a2a;
+  --chess-last-online-color: #ffb380;
+  --chess-last-online-border: #7a5d3a;
+  --chess-last-online-font-weight: bold;
+
+  --chess-dynamic-last-seen-background: #2a3a4a;
+  --chess-dynamic-last-seen-color: #a3d9ff;
+  --chess-dynamic-last-seen-border: #4a6a8a;
+  --chess-dynamic-last-seen-font-weight: bold;
+}
+
+
 html, body {
     font-family: Arial, sans-serif;
     background-color: var(--body-background);
@@ -53,6 +97,7 @@ html, body {
     flex-direction: column;
     cursor: url('/assets/vector/arrowhead-rounded-outline.svg') 12 12, auto;
     color-scheme: light dark;
+    transition: all .25s ease-in-out;
 }
 
 a:hover {
