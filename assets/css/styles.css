@@ -39,12 +39,13 @@ body.dark-theme {
     --text-muted: #999999;
 
     /* Tweaked accents for dark mode readability */
-    --accent-red: #ff7575;
-    --accent-blue: #66b5ff;
-    --accent-yellow: #ffdf66;
-    --accent-green: #1ad990;
-    --accent-purple: #c08cff;
-    --accent-pink: #ff9eee;
+    --accent-red: #8f2828;
+    --accent-blue: #1c3e61;
+    --accent-yellow: #4d4217;
+    --accent-green: #00633e;
+    --accent-purple: #4e3078;
+    --accent-pink: #7d446f;
+    --modrinth-color: #0d823e;
 }
 
 * {
@@ -237,7 +238,7 @@ body {
     letter-spacing: -0.05em;
     color: var(--text-primary);
     text-transform: uppercase;
-    text-shadow: 5px 5px 0px #fff, 7px 7px 0px var(--text-primary);
+    text-shadow: 5px 5px 0px var(--bg-secondary), 7px 7px 0px var(--text-primary);
     transform: rotate(-2deg);
     margin: 0;
 }
@@ -246,7 +247,7 @@ body {
     font-size: 1.25rem;
     color: var(--text-primary);
     font-weight: 800;
-    background: #fff;
+    background: var(--bg-secondary);
     padding: 6px 20px;
     border: var(--border-thickness) solid var(--text-primary);
     border-radius: 30px;
@@ -320,7 +321,7 @@ body {
 
 .section-title i {
     background-color: var(--accent-purple);
-    color: #fff;
+    color: var(--bg-color);
     width: 48px;
     height: 48px;
     display: flex;
@@ -461,7 +462,7 @@ body {
     object-fit: cover;
     border: 3px solid var(--text-primary);
     box-shadow: 2px 2px 0 var(--text-primary);
-    background-color: #fff;
+    background-color: var(--bg-secondary);
     transition: transform 0.3s ease;
 }
 
@@ -532,7 +533,7 @@ body {
 
 .project-card-link {
     background-color: var(--modrinth-color);
-    color: #fff;
+    color: var(--bg-color);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 900;
@@ -564,7 +565,7 @@ body {
 .affiliate-logo-container {
     width: 100px;
     height: 100px;
-    background-color: #fff;
+    background-color: var(--bg-secondary);
     border: 3px solid var(--text-primary);
     border-radius: 12px;
     box-shadow: 3px 3px 0 var(--text-primary);
@@ -663,8 +664,8 @@ body {
 }
 
 .credit-badge:nth-child(1) { background-color: var(--accent-yellow); }
-.credit-badge:nth-child(2) { background-color: #fff; }
-.credit-badge:nth-child(3) { background-color: var(--accent-purple); color: #fff; }
+.credit-badge:nth-child(2) { background-color: var(--bg-secondary); }
+.credit-badge:nth-child(3) { background-color: var(--accent-purple); color: var(--text-primary); }
 
 .credit-badge a {
     color: inherit;
@@ -696,7 +697,7 @@ body {
 
 .legal-links a {
     color: var(--text-primary);
-    background-color: #fff;
+    background-color: var(--bg-secondary);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 900;
@@ -751,4 +752,14 @@ body {
     .link-grid, .project-grid, .affiliate-grid {
         grid-template-columns: 1fr;
     }
+}
+body.dark-theme .credit-badge:nth-child(3) {
+    color: #f4f0ea; /* Explicit light text for readability on dark purple */
+}
+body.dark-theme .project-card-link {
+    color: #f4f0ea;
+}
+
+body.dark-theme .section-title i {
+    color: #f4f0ea;
 }
