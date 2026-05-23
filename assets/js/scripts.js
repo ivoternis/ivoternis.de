@@ -347,4 +347,71 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     fetchModrinthProjects();
+
+    // Playful Neo-Brutalist Interactivity
+    const playfulCards = document.querySelectorAll('.link-card, .widget-card, .project-card, .affiliate-card a');
+    const playfulColors = [
+        'var(--accent-red)',
+        'var(--accent-blue)',
+        'var(--accent-yellow)',
+        'var(--accent-green)',
+        'var(--accent-purple)',
+        'var(--accent-pink)',
+        '#ffffff'
+    ];
+
+    playfulCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            const randomColor = playfulColors[Math.floor(Math.random() * playfulColors.length)];
+            const randomRotation = (Math.random() * 4) - 2; // -2deg to 2deg
+
+            card.style.backgroundColor = randomColor;
+            card.style.transform = `translate(2px, 2px) rotate(${randomRotation}deg)`;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.backgroundColor = 'var(--bg-secondary)';
+            card.style.transform = '';
+        });
+
+        card.addEventListener('mousedown', () => {
+            card.style.transform = 'translate(6px, 6px)'; // Match shadow offset
+        });
+
+        card.addEventListener('mouseup', () => {
+            const randomRotation = (Math.random() * 4) - 2;
+            card.style.transform = `translate(2px, 2px) rotate(${randomRotation}deg)`;
+        });
+    });
+
+    // Add playful interactivity dynamically created elements (Modrinth cards)
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.addedNodes.length) {
+                mutation.addedNodes.forEach((node) => {
+                    if (node.classList && node.classList.contains('project-card')) {
+                        node.addEventListener('mouseenter', () => {
+                            const randomColor = playfulColors[Math.floor(Math.random() * playfulColors.length)];
+                            const randomRotation = (Math.random() * 4) - 2;
+                            node.style.backgroundColor = randomColor;
+                            node.style.transform = `translate(2px, 2px) rotate(${randomRotation}deg)`;
+                        });
+                        node.addEventListener('mouseleave', () => {
+                            node.style.backgroundColor = 'var(--bg-secondary)';
+                            node.style.transform = '';
+                        });
+                        node.addEventListener('mousedown', () => {
+                            node.style.transform = 'translate(6px, 6px)';
+                        });
+                        node.addEventListener('mouseup', () => {
+                            const randomRotation = (Math.random() * 4) - 2;
+                            node.style.transform = `translate(2px, 2px) rotate(${randomRotation}deg)`;
+                        });
+                    }
+                });
+            }
+        });
+    });
+
+    observer.observe(modrinthProjectsContainer, { childList: true });
 });
