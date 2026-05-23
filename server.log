@@ -1,0 +1,5 @@
+127.0.0.1 - - [23/May/2026 21:10:26] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2026 21:10:26] "GET /assets/css/styles.css HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2026 21:10:26] "GET /assets/img/skrime-primary.png HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2026 21:10:26] "GET /assets/js/scripts.js HTTP/1.1" 200 -
+127.0.0.1 - - [23/May/2026 21:10:26] "GET /assets/img/aitch-systems_logo_350x55.svg HTTP/1.1" 200 -

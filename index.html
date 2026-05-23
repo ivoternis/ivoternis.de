@@ -3,70 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivo Ternis - Links</title>
+    <title>Ivo Ternis - Links & Projekte</title>
     <meta name="description" content="Alle wichtigen Links von Ivo Ternis auf einen Blick: GitHub, X/Twitter, Instagram, YouTube, Twitch, CodePen, TikTok, Discord, E-Mail und Modrinth.">
     <meta name="author" content="Ivo Ternis">
     <meta name="language" content="de">
     <meta name="revisit-after" content="7 days">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <main>
-        <h1>Meine Links</h1>
-        <ul class="links-list">
-            <li><a href="https://github.com/ivoternis" target="_blank">GitHub</a></li>
-            <li><a href="https://x.com/ivoternis" target="_blank">X/Twitter</a></li>
-            <li><a href="https://www.instagram.com/ivoternis" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/@ivoternis" target="_blank">YouTube</a></li>
-            <li><a href="https://www.twitch.tv/ivoternis" target="_blank">Twitch</a></li>
-            <li><a href="https://codepen.io/ivoternis" target="_blank">CodePen</a></li>
-            <li><a href="https://www.tiktok.com/@ivoternis" target="_blank">TikTok</a></li>
-            <li><a href="https://medium.com/@ivoternis" target="_blank">Medium</a></li>
-            <li><span>Discord: @IvoTernis</span></li>
-            <li><span>E-Mail: ivoternis@gmail.com</span></li>
-            <li><a href="https://modrinth.com/user/ivoternis" target="_blank">Modrinth</a></li>
-            <li><a href="https://www.chess.com/member/ivoternis" target="_blank">Chess.com</a></li>
-        </ul>
-
-        
-        <h2>Meine Projekte und Aktivitäten</h2>
-        
-        <div id="github-activity-streak">
-            <p>Lade GitHub Aktivitäts-Streak...</p>
-        </div>
-        
-        <div id="chess-com-last-online" class="hidden">
-            <p>Lade Chess.com Aktivität (Exakt)...</p>
-        </div>
-        
-        <div id="chess-com-dynamic-last-seen">
-            <p>Lade Chess.com Aktivität (Dynamisch)...</p>
-        </div>
-        
-        <h2>Meine Modrinth Projekte</h2>
-        <div id="modrinth-projects" class="project-grid"></div>
-        
-        <h2>IvoLabs Links</h2>
-        <ul class="links-list">
-            <li><a href="https://github.com/ivolabs" target="_blank">GitHub</a></li>
-            <li><a href="https://ivolabs.ivoternis.de" target="_blank">Webseite</a></li>
-        </ul>
-
-        <div class="affiliate-section">
-            <h2>Affiliate-Links</h2>
-            <div class="skrime-affiliate">
-                <a href="https://skrime.eu/a/ivoternis" target="_blank"><img src="assets/img/skrime-primary.png" href="https://skrime.eu/a/ivoternis" alt="Skrime Logo">Günstiges und zuverlässiges Hosting</a>
+    <div class="page-wrapper">
+        <header class="hero">
+            <div class="shape shape-circle"></div>
+            <div class="shape shape-square"></div>
+            <div class="shape shape-triangle"></div>
+            <div class="hero-content">
+                <h1>Ivo Ternis</h1>
+                <p class="tagline">Developer, Creator & Modder</p>
             </div>
-            <div class="aitchsystems-affiliate">
-                <a href="https://aitch.systems/a/IvoTernis" target="_blank"><img src="assets/img/aitch-systems_logo_350x55.svg" alt="Aitchsystems Logo"><!--Webhosting, Gameservers und co.--></a>
+        </header>
+
+        <main class="container">
+
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-link"></i> Connect</h2>
+                <div class="link-grid">
+                    <a href="https://github.com/ivoternis" target="_blank" class="link-card"><i class="fab fa-github"></i> <span>GitHub</span></a>
+                    <a href="https://x.com/ivoternis" target="_blank" class="link-card"><i class="fab fa-twitter"></i> <span>X/Twitter</span></a>
+                    <a href="https://www.instagram.com/ivoternis" target="_blank" class="link-card"><i class="fab fa-instagram"></i> <span>Instagram</span></a>
+                    <a href="https://www.youtube.com/@ivoternis" target="_blank" class="link-card"><i class="fab fa-youtube"></i> <span>YouTube</span></a>
+                    <a href="https://www.twitch.tv/ivoternis" target="_blank" class="link-card"><i class="fab fa-twitch"></i> <span>Twitch</span></a>
+                    <a href="https://codepen.io/ivoternis" target="_blank" class="link-card"><i class="fab fa-codepen"></i> <span>CodePen</span></a>
+                    <a href="https://www.tiktok.com/@ivoternis" target="_blank" class="link-card"><i class="fab fa-tiktok"></i> <span>TikTok</span></a>
+                    <a href="https://medium.com/@ivoternis" target="_blank" class="link-card"><i class="fab fa-medium"></i> <span>Medium</span></a>
+                    <a href="https://modrinth.com/user/ivoternis" target="_blank" class="link-card"><i class="fas fa-cube"></i> <span>Modrinth</span></a>
+                    <a href="https://www.chess.com/member/ivoternis" target="_blank" class="link-card"><i class="fas fa-chess"></i> <span>Chess.com</span></a>
+                    <div class="link-card copy-card"><i class="fab fa-discord"></i> <span>Discord: @IvoTernis</span></div>
+                    <div class="link-card copy-card"><i class="fas fa-envelope"></i> <span>ivoternis@gmail.com</span></div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-chart-line"></i> Aktivitäten</h2>
+                <div class="activity-widgets">
+                    <div id="github-activity-streak" class="widget-card">
+                        <i class="fab fa-github widget-icon"></i>
+                        <div class="widget-content">
+                            <p>Lade GitHub Aktivitäts-Streak...</p>
+                        </div>
+                    </div>
+
+                    <div id="chess-com-last-online" class="hidden widget-card">
+                        <i class="fas fa-chess widget-icon"></i>
+                        <div class="widget-content">
+                            <p>Lade Chess.com Aktivität (Exakt)...</p>
+                        </div>
+                    </div>
+
+                    <div id="chess-com-dynamic-last-seen" class="widget-card">
+                        <i class="fas fa-chess widget-icon"></i>
+                        <div class="widget-content">
+                            <p>Lade Chess.com Aktivität (Dynamisch)...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-box-open"></i> Meine Modrinth Projekte</h2>
+                <div id="modrinth-projects" class="project-grid"></div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title"><i class="fas fa-flask"></i> IvoLabs</h2>
+                <div class="link-grid">
+                    <a href="https://github.com/ivolabs" target="_blank" class="link-card"><i class="fab fa-github"></i> <span>GitHub</span></a>
+                    <a href="https://ivolabs.ivoternis.de" target="_blank" class="link-card"><i class="fas fa-globe"></i> <span>Webseite</span></a>
+                </div>
+            </section>
+
+            <section class="section affiliate-section">
+                <h2 class="section-title"><i class="fas fa-handshake"></i> Partner & Empfehlungen</h2>
+                <div class="affiliate-grid">
+                    <div class="affiliate-card skrime-affiliate">
+                        <a href="https://skrime.eu/a/ivoternis" target="_blank">
+                            <div class="affiliate-logo-container">
+                                <img src="assets/img/skrime_favicon.png" alt="Skrime Logo">
+                            </div>
+                            <div class="affiliate-info">
+                                <h3>Skrime Hosting</h3>
+                                <p>Günstiges und zuverlässiges Hosting</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="affiliate-card aitchsystems-affiliate">
+                        <a href="https://aitch.systems/a/IvoTernis" target="_blank">
+                            <div class="affiliate-logo-container">
+                                <img src="assets/img/aitchsystems_favicon.png" alt="Aitchsystems Logo" class="aitch-logo">
+                            </div>
+                            <div class="affiliate-info">
+                                <h3>Aitch Systems</h3>
+                                <p>Webhosting, Gameservers & Co.</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-credits">
+                <ul>
+                    <li class="credit-badge">Domain von <a href="https://dnbx.de" target="_blank">dnbx.de</a></li>
+                    <li class="credit-badge">Webdesign & Webentwicklung von <a href="https://ternis-edv.de" target="_blank">ternis-edv.de</a> und <a href="https://xpsystems.de" target="_blank">xpsystems.de/.eu</a></li>
+                    <li class="credit-badge">Ein Projekt von Fabian Ternis (<a href="https://fabianternis.de" target="_blank">fabianternis.de</a> / <a href="https://fabianternis.dev" target="_blank">fabianternis.dev</a>)</li>
+                </ul>
+            </div>
+            <div class="legal-links">
+                <a href="http://fternis.de/imprint" target="_blank">Impressum</a>
+                <a href="http://fternis.de/privacy" target="_blank">Datenschutz</a>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <a href="https://fabianternis.de" target="_blank">Fabian Ternis</a>
-        <a href="http://fternis.de/imprint" target="_blank">Impressum</a>
-        <a href="http://fternis.de/privacy" target="_blank">Datenschutz</a>
     </footer>
     
     <script src="assets/js/scripts.js"></script>
