@@ -55,7 +55,8 @@ body {
     width: 100%;
     text-align: center;
     padding: 60px 20px 40px;
-    background: linear-gradient(180deg, rgba(30, 41, 59, 0.8) 0%, var(--bg-color) 100%);
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--bg-tertiary);
 }
 
 .hero-content {
@@ -64,22 +65,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
-}
-
-.profile-avatar {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(135deg, var(--accent-color), #8b5cf6);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 700;
-    color: white;
-    box-shadow: 0 8px 32px var(--accent-glow);
-    margin-bottom: 8px;
+    gap: 12px;
 }
 
 .hero h1 {
@@ -111,7 +97,6 @@ body {
     border: 1px solid var(--bg-tertiary);
     border-radius: var(--border-radius);
     padding: 32px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .section-title {
@@ -160,9 +145,7 @@ body {
 
 .link-card:hover {
     background-color: #3f4e66;
-    transform: translateY(-2px);
     border-color: var(--accent-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .link-card:hover i {
@@ -230,9 +213,8 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     border-color: var(--modrinth-color);
+    background-color: #3f4e66;
 }
 
 .project-card-header {
@@ -345,9 +327,8 @@ body {
 }
 
 .affiliate-card a:hover {
-    transform: translateY(-2px);
     border-color: var(--accent-color);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #3f4e66;
 }
 
 .affiliate-logo-container {
