@@ -42,7 +42,7 @@ body.dark-theme {
     --text-muted: #888888;
 
     /* Keep the hard black structural outlines in dark mode to preserve the neo-brutalist feel */
-    --border-shadow-color: #000000;
+    --border-shadow-color: #e0e0e0;
 
     /* We can revert to the brighter, more playful accents since the contrast is handled by the black borders and dark backgrounds */
     --accent-red: #ff5e5e;
@@ -200,6 +200,18 @@ body {
     border-bottom: 70px solid transparent;
 }
 
+body.dark-theme .link-card:hover,
+body.dark-theme .widget-card:hover,
+body.dark-theme .project-card:hover,
+body.dark-theme .affiliate-card a:hover {
+    color: #121212 !important;
+}
+
+body.dark-theme .link-card:hover i,
+body.dark-theme .widget-card:hover i,
+body.dark-theme .project-card:hover i {
+    color: #121212 !important;
+}
 
 @keyframes float {
     0% { transform: translateY(0px) rotate(0deg); }
@@ -768,4 +780,9 @@ body.dark-theme .project-card-link {
 
 body.dark-theme .section-title i {
     color: #f4f0ea;
+}
+
+.affiliate-note {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
 }
