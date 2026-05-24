@@ -348,6 +348,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchModrinthProjects();
 
+
+    // Click to copy functionality
+    const copyCards = document.querySelectorAll('.copy-card');
+    copyCards.forEach(card => {
+        card.addEventListener('click', async () => {
+            const span = card.querySelector('span');
+            if (!span) return;
+
+            const originalText = span.textContent;
+            let textToCopy = originalText;
+
+            if (originalText.startsWith('Discord: ')) {
+                textToCopy = originalText.substring(9);
+            }
+
+            try {
+                await navigator.clipboard.writeText(textToCopy);
+                span.textContent = 'Kopiert!';
+
+                // Add a visual cue class
+                card.style.backgroundColor = 'var(--accent-green)';
+
+                setTimeout(() => {
+                    span.textContent = originalText;
+                    card.style.backgroundColor = ''; // Let hover effect take over again
+                }, 2000);
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+                span.textContent = 'Fehler!';
+                setTimeout(() => {
+                    span.textContent = originalText;
+                }, 2000);
+            }
+        });
+    });
+
     // Playful Neo-Brutalist Interactivity
     const playfulCards = document.querySelectorAll('.link-card, .widget-card, .project-card, .affiliate-card a');
     const playfulColors = [
@@ -357,7 +393,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'var(--accent-green)',
         'var(--accent-purple)',
         'var(--accent-pink)',
-        '#ffffff'
+
+
     ];
 
     playfulCards.forEach(card => {
@@ -414,4 +451,48 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     observer.observe(modrinthProjectsContainer, { childList: true });
+
+    // Scroll Entrance Animations
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+    const sectionObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    const sections = document.querySelectorAll('.section');
+    sections.forEach(section => {
+        section.classList.add('fade-in-up');
+        sectionObserver.observe(section);
+    });
+
+    // Dark Mode Toggle
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (themeToggleBtn) {
+        const themeIcon = themeToggleBtn.querySelector('i');
+
+        // Check local storage for theme preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+            let theme = 'light';
+            if (document.body.classList.contains('dark-theme')) {
+                theme = 'dark';
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            }
+            localStorage.setItem('theme', theme);
+        });
+    }
 });
