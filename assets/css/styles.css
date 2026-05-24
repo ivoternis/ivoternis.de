@@ -8,9 +8,12 @@
     --text-muted: #555555;
 
     /* Playful Accents */
-    --accent-red: #ff5e5e;
+    --accent-red: #cc4b4b;
     --accent-blue: #4da6ff;
     --accent-yellow: #ffde59;
+    --accent-blue-dark: #205c99;
+    --accent-yellow-dark: #b39b36;
+    --accent-pink-dark: #b366a0;
     --accent-green: #00d084;
     --accent-purple: #b070ff;
     --accent-pink: #ff91e4;
@@ -45,12 +48,15 @@ body.dark-theme {
     --border-shadow-color: #e0e0e0;
 
     /* We can revert to the brighter, more playful accents since the contrast is handled by the black borders and dark backgrounds */
-    --accent-red: #ff5e5e;
-    --accent-blue: #4da6ff;
-    --accent-yellow: #e6c845; /* Slightly less blinding yellow */
-    --accent-green: #00d084;
-    --accent-purple: #b070ff;
-    --accent-pink: #ff91e4;
+    --accent-red: #cc4b4b;
+    --accent-blue: #3d85cc; /* Darkened */
+    --accent-yellow: #b8a037; /* Darkened */
+    --accent-blue-dark: #205c99;
+    --accent-yellow-dark: #b39b36;
+    --accent-pink-dark: #b366a0;
+    --accent-green: #00a669; /* Darkened */
+    --accent-purple: #8d59cc; /* Darkened */
+    --accent-pink: #cc74b6; /* Darkened */
     --modrinth-color: #1bd96a;
 }
 
@@ -204,13 +210,13 @@ body.dark-theme .link-card:hover,
 body.dark-theme .widget-card:hover,
 body.dark-theme .project-card:hover,
 body.dark-theme .affiliate-card a:hover {
-    color: #121212 !important;
+    color: var(--bg-color) !important;
 }
 
 body.dark-theme .link-card:hover i,
 body.dark-theme .widget-card:hover i,
 body.dark-theme .project-card:hover i {
-    color: #121212 !important;
+    color: var(--bg-color) !important;
 }
 
 @keyframes float {
@@ -772,17 +778,37 @@ body.dark-theme .project-card:hover i {
     }
 }
 body.dark-theme .credit-badge:nth-child(3) {
-    color: #f4f0ea; /* Explicit light text for readability on dark purple */
+    color: var(--bg-color); /* Explicit light text for readability on dark purple */
 }
 body.dark-theme .project-card-link {
-    color: #f4f0ea;
+    color: var(--bg-color);
 }
 
 body.dark-theme .section-title i {
-    color: #f4f0ea;
+    color: var(--bg-color);
 }
 
 .affiliate-note {
     color: var(--text-secondary);
     margin-bottom: 20px;
+}
+
+
+/* Dark mode specific enhancements */
+body.dark-theme .hero {
+    background-color: var(--accent-yellow-dark);
+}
+
+body.dark-theme .site-footer {
+    background-color: var(--accent-blue-dark);
+}
+
+body.dark-theme .site-footer::before {
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--accent-pink-dark),
+        var(--accent-pink-dark) 20px,
+        var(--border-shadow-color) 20px,
+        var(--border-shadow-color) 40px
+    );
 }
