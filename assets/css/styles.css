@@ -785,7 +785,7 @@ body.dark-theme .project-card-link {
 }
 
 body.dark-theme .section-title i {
-    color: var(--bg-color);
+    color: var(--text-primary);
 }
 
 .affiliate-note {
