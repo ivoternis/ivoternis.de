@@ -780,24 +780,7 @@ body {
         padding: 24px;
     }
 
-    .link-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
-    }
-
-    .link-card {
-        flex-direction: column;
-        padding: 12px 10px;
-        font-size: 0.85rem;
-        text-align: center;
-        gap: 8px;
-    }
-
-    .link-card i {
-        font-size: 1.5rem;
-    }
-
-    .project-grid, .affiliate-grid, .activity-widgets {
+    .link-grid, .project-grid, .affiliate-grid, .activity-widgets {
         grid-template-columns: 1fr;
     }
 
