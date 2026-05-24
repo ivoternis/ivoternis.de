@@ -363,6 +363,7 @@ body {
     padding: 16px 20px;
     font-weight: 800;
     font-size: 1.1rem;
+    width: fit-content;
 }
 
 .link-card i {
