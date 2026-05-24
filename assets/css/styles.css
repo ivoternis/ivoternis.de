@@ -35,31 +35,6 @@
     --modrinth-color: #1bd96a;
 }
 
-/* Dark Theme Variables */
-body.dark-theme {
-    --bg-color: #121212;
-    --bg-secondary: #1e1e1e;
-    --bg-tertiary: #2a2a2a;
-    --text-primary: #f4f0ea;
-    --text-secondary: #d4d4d4;
-    --text-muted: #888888;
-
-    /* Keep the hard black structural outlines in dark mode to preserve the neo-brutalist feel */
-    --border-shadow-color: #e0e0e0;
-
-    /* We can revert to the brighter, more playful accents since the contrast is handled by the black borders and dark backgrounds */
-    --accent-red: #cc4b4b;
-    --accent-blue: #4da6ff;
-    --accent-yellow: #ffde59;
-    --accent-blue-dark: #205c99;
-    --accent-yellow-dark: #b39b36;
-    --accent-pink-dark: #b366a0;
-    --accent-green: #00d084;
-    --accent-purple: #b070ff;
-    --accent-pink: #ff91e4;
-    --modrinth-color: #1bd96a;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -204,20 +179,6 @@ body {
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
     border-bottom: 70px solid transparent;
-}
-
-body.dark-theme .link-card:hover,
-body.dark-theme .widget-card:hover,
-body.dark-theme .project-card:hover,
-body.dark-theme .affiliate-card a:hover {
-    color: var(--bg-color) !important;
-}
-
-body.dark-theme .link-card:hover *,
-body.dark-theme .widget-card:hover *,
-body.dark-theme .project-card:hover *,
-body.dark-theme .affiliate-card a:hover * {
-    color: var(--bg-color) !important;
 }
 
 @keyframes float {
@@ -828,38 +789,8 @@ body.dark-theme .affiliate-card a:hover * {
         margin-top: 50px;
     }
 }
-body.dark-theme .credit-badge:nth-child(3) {
-    color: var(--bg-color); /* Explicit dark text for readability on bright purple */
-}
-body.dark-theme .project-card-link {
-    color: var(--bg-color);
-}
-
-body.dark-theme .section-title i {
-    color: var(--text-primary);
-}
 
 .affiliate-note {
     color: var(--text-secondary);
     margin-bottom: 20px;
-}
-
-
-/* Dark mode specific enhancements */
-body.dark-theme .hero {
-    background-color: var(--accent-yellow-dark);
-}
-
-body.dark-theme .site-footer {
-    background-color: var(--accent-blue-dark);
-}
-
-body.dark-theme .site-footer::before {
-    background: repeating-linear-gradient(
-        -45deg,
-        var(--accent-pink-dark),
-        var(--accent-pink-dark) 20px,
-        var(--border-shadow-color) 20px,
-        var(--border-shadow-color) 40px
-    );
 }

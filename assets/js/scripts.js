@@ -471,28 +471,4 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('fade-in-up');
         sectionObserver.observe(section);
     });
-
-    // Dark Mode Toggle
-    const themeToggleBtn = document.getElementById('theme-toggle');
-    if (themeToggleBtn) {
-        const themeIcon = themeToggleBtn.querySelector('i');
-
-        // Check local storage for theme preference
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            themeIcon.classList.replace('fa-moon', 'fa-sun');
-        }
-        themeToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-            let theme = 'light';
-            if (document.body.classList.contains('dark-theme')) {
-                theme = 'dark';
-                themeIcon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                themeIcon.classList.replace('fa-sun', 'fa-moon');
-            }
-            localStorage.setItem('theme', theme);
-        });
-    }
 });
